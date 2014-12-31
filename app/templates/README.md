@@ -19,8 +19,14 @@ bower install <%= props.slugName %> --save
 Once the module has been installed, you will have to load it in your main SASS file:
 
 ```scss
-@import "bower_components/<%= props.slugName %>/sass/<%= props.slugName %>.scss"
+@import "bower_components/<%= props.slugName %>/sass/<%= props.shortName %>.scss"
 ```
+
+<% if (props.languages.js) { %>This module also include a JavaScript component, which you will have to load separately.
+
+```html
+<script src="bower_components/<%= props.slugName %>/dist/<%= props.shortName %>.min.js" type="text/javascript"></script>
+```<% } %>
 
 You can use [wiredep](https://github.com/taptapship/wiredep) or [grunt-wiredep](https://github.com/stephenplusplus/grunt-wiredep) to automatically inject files in your build process.
 
