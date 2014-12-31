@@ -54,7 +54,7 @@ module.exports = generators.Base.extend({
       }]
     }, {
       name: 'description',
-      message: 'Description (what does your module do, in one sentence)',
+      message: 'Description',
       default: 'Sexy lintel module.'
     }, {
       name: 'version',
