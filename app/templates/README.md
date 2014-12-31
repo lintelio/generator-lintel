@@ -25,38 +25,51 @@ You can use [wiredep](https://github.com/taptapship/wiredep) or [grunt-wiredep](
 ## Variables
 Check the vars file in the `sass` folder to see the full list of variables you can customize.
 
-#### $sample-bg
+#### $bacon-bg
 Default value: `#4b77be`  
 
-Change the post background.
+Change the bacon background.
 
-#### $sample-color
-Default value: `#fff`
+#### $bacon-border
+Default value: `#f00`  
 
-Change the post color.
+Change the bacon border color.
+
+#### $bacon-text
+Default value: `#fff`  
+
+Change the bacon text color.
 
 
 ## Mixins
 Check the mixins file in the `sass` folder to see how you can extend this module.
 
-#### sample-mixin($bg, $color)
-Default $bg: `$sample-bg`  
-Default $color: `$sample-color`
+#### make-bacon($bg, $border, $text)
+Default $bg: `$bacon-bg`  
+Default $border: `$bacon-border`  
+Default $text: `$bacon-text`  
 
-Sets the background color and text color of an element.
+Sets the background, border, and text color of an element.
 
 ```scss
-.post {
-  @include sample-mixin(#fff, #000);
+.bacon-primary {
+  @include make-bacon(#fff, #f00, #000);
 }
 ```
 
 
 ## Examples
 
-#### Single Post
+#### Bacon
 ```html
-<div class="post">
+<div class="bacon">
+  Hello world!
+</div>
+```
+
+#### Primary Bacon
+```html
+<div class="bacon bacon-primary">
   Hello world!
 </div>
 ```
