@@ -1,0 +1,7 @@
+// Please try to maintain the same code style as outlined here:
+// https://github.com/lintelio/lintel/blob/master/CONTRIBUTING.md
+
+@mixin sample-mixin($bg: $sample-bg, $color: $sample-text) {
+  background-color: $bg;
+  color: $color;
+}

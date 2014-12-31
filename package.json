@@ -1,0 +1,27 @@
+{
+  "name": "generator-lintel",
+  "version": "0.1.0",
+  "description": "Scaffold a lintel module.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lintelio/generator-lintel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lintelio/generator-lintel/issues"
+  },
+  "author": {
+    "name": "Marius Craciunoiu",
+    "url": "www.mariusc23.com"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "bower-name": "^1.0.0",
+    "chalk": "^0.5.1",
+    "npm-name": "^1.0.2",
+    "yeoman-generator": "^0.18.5"
+  },
+  "devDependencies": {
+  }
+}

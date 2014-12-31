@@ -1,0 +1,10 @@
+// Please try to maintain the same code style as outlined here:
+// https://github.com/lintelio/lintel/blob/master/CONTRIBUTING.md
+
+@import '<%= props.shortName %>-vars';
+@import '<%= props.shortName %>-functions';
+@import '<%= props.shortName %>-mixins';
+
+.post {
+  @include sample-mixin($sample-bg);
+}
