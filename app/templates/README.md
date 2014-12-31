@@ -3,6 +3,9 @@
 
 > <%= props.description %>
 
+[![npm](https://img.shields.io/npm/v/<%= props.slugName %>.svg)](<%= props.homepage %>)
+[![Bower](https://img.shields.io/bower/v/<%= props.slugName %>.svg)](<%= props.homepage %>)
+
 
 ## Getting Started
 This module requires Lintel.
