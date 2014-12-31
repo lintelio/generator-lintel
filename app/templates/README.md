@@ -22,7 +22,7 @@ Once the module has been installed, you will have to load it in your main SASS f
 @import "bower_components/<%= props.slugName %>/sass/<%= props.shortName %>.scss"
 ```
 
-<% if (props.languages.js) { %>This module also include a JavaScript component, which you will have to load separately.
+<% if (props.languages.js) { %>This module also includes a JavaScript component, which you will have to load separately.
 
 ```html
 <script src="bower_components/<%= props.slugName %>/dist/<%= props.shortName %>.min.js" type="text/javascript"></script>
