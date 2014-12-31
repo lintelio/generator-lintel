@@ -1,7 +1,8 @@
 // Please try to maintain the same code style as outlined here:
 // https://github.com/lintelio/lintel/blob/master/CONTRIBUTING.md
 
-@mixin sample-mixin($bg: $sample-bg, $color: $sample-text) {
+@mixin make-bacon($bg, $border, $text) {
   background-color: $bg;
-  color: $color;
+  border-color: $border;
+  color: $text;
 }
