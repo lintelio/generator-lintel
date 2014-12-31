@@ -3,6 +3,7 @@ Lintel Module Generator
 
 > Yeoman generator for lintel modules — lets your quickly scaffold a lintel module.
 
+[![npm](https://img.shields.io/npm/v/generator-lintel.svg)](https://github.com/lintelio/generator-lintel)
 
 ## Usage
 Install `generator-lintel`
