@@ -141,6 +141,7 @@ module.exports = generators.Base.extend({
           'grunt-contrib-cssmin': '^0.10.0',
           "grunt-contrib-jshint": "^0.10.0",
           'grunt-contrib-nodeunit': '^0.4.1',
+          "grunt-contrib-uglify": "^0.7.0",
           'grunt-contrib-watch': '^0.6.1',
           'grunt-sass': '^0.17.0',
           'grunt-webshot': '^0.3.0',
@@ -157,6 +158,10 @@ module.exports = generators.Base.extend({
       if (this.props.authorUrl) {
         pkgFile.author.url = this.props.authorUrl;
       }
+      if (this.props.languages.js) {
+        pkgFile.main.push('dist/' + this.props.shortName + '.min.js');
+      }
+
       this.writeFileFromString(JSON.stringify(pkgFile, null, 2), 'package.json');
 
       // Bower

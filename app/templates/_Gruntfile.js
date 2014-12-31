@@ -214,7 +214,29 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc'
       },
       files: {
-        src: ['js/<%= props.slugName %>.js']
+        src: ['js/**/*.js']
+      }
+    },
+
+    // Minify js
+    uglify: {
+      options: {
+        mangle: true,
+        compress: true,
+        sourceMap: true,
+      },
+      individual: {
+        files: [{
+          expand: true,
+          cwd: 'js',
+          src: '**/*.js',
+          dest: 'dist/'
+        }]
+      },
+      concat: {
+        files: {
+          'dist/<%= props.shortName %>.min.js': ['js/**/*.js']
+        }
       }
     },
 
@@ -243,9 +265,9 @@ module.exports = function (grunt) {
 
   });
 
-  grunt.registerTask('compile', ['sass:dist', 'autoprefixer:dist', 'cssmin:dist']);
+  grunt.registerTask('compile', ['sass:dist', 'autoprefixer:dist', 'cssmin:dist', 'uglify']);
 
-  grunt.registerTask('test-watch', ['compile', 'csslint']);
+  grunt.registerTask('test-watch', ['compile', 'csslint', 'jshint']);
 
   grunt.registerTask('test', ['test-watch', 'connect', 'clean:tests', 'webshot', 'nodeunit']);
 
