@@ -82,7 +82,7 @@ module.exports = generators.Base.extend({
     }, {
       name: 'lintelVersion',
       message: 'What version of lintel does it need?',
-      default: '~0.0.1'
+      default: '~0.1.0'
     }];
     this.prompt(prompts, function (answers) {
       if (!answers.homepage && this.repoUrl) {
