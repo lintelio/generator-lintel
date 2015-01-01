@@ -125,7 +125,7 @@ module.exports = generators.Base.extend({
         ],
         main: [
           'sass/' + this.props.shortName + '.sass',
-          'dist/' + this.props.shortName + '.css'
+          'dist/' + this.props.shortName + '.min.css'
         ],
         license: this.props.license,
         dependencies: {
