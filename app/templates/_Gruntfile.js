@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         csslintrc: '.csslintrc'
       },
       dist: {
-        src: ['<%%= lintel.dist %>/<%= props.name %>.css']
+        src: ['<%%= lintel.dist %>/<%= props.shortName %>.css']
       }
     },
 
