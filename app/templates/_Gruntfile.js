@@ -28,6 +28,7 @@ module.exports = function (grunt) {
         sourceMap: true,
         includePaths: [
           'bower_components/lintel/sass',
+          'bower_components',
           'sass'
         ]
       },
