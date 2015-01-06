@@ -1,6 +1,6 @@
 {
   "name": "generator-lintel",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Scaffold a lintel module.",
   "repository": {
     "type": "git",

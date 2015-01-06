@@ -3,7 +3,7 @@
 
 > <%= props.description %>
 
-[![npm](https://img.shields.io/npm/v/<%= props.slugName %>.svg)](<%= props.homepage %>)
+[![npm](https://img.shields.io/npm/v/<%= props.slugName %>.svg)](https://www.npmjs.com/package/<%= props.slugName %>)
 [![Bower](https://img.shields.io/bower/v/<%= props.slugName %>.svg)](<%= props.homepage %>)
 
 
