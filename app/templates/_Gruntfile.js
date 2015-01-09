@@ -262,11 +262,21 @@ module.exports = function (grunt) {
           livereload: true
         }
       },
+    },
+
+    // Notify of changes
+    notify: {
+      compile: {
+        options: {
+          title: '<%= props.name %>',
+          message: 'Done Compiling'
+        }
+      }
     }
 
   });
 
-  grunt.registerTask('compile', ['sass:dist', 'autoprefixer:dist', 'cssmin:dist', 'uglify']);
+  grunt.registerTask('compile', ['sass:dist', 'autoprefixer:dist', 'cssmin:dist', 'uglify', 'notify:compile']);
 
   grunt.registerTask('test-watch', ['compile', 'csslint', 'jshint']);
 

@@ -139,10 +139,11 @@ module.exports = generators.Base.extend({
           'grunt-contrib-connect': '^0.9.0',
           'grunt-contrib-csslint': '^0.3.1',
           'grunt-contrib-cssmin': '^0.10.0',
-          "grunt-contrib-jshint": "^0.10.0",
+          'grunt-contrib-jshint': '^0.10.0',
           'grunt-contrib-nodeunit': '^0.4.1',
-          "grunt-contrib-uglify": "^0.7.0",
+          'grunt-contrib-uglify': '^0.7.0',
           'grunt-contrib-watch': '^0.6.1',
+          'grunt-notify': '^0.4.1',
           'grunt-sass': '^0.17.0',
           'grunt-webshot': '^0.3.0',
           'load-grunt-tasks': '^1.0.0'
