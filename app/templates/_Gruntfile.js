@@ -274,7 +274,8 @@ module.exports = function (grunt) {
       },
       livereload: {
         files: [
-          '<%%= lintel.dist %>/**/*.css'
+          '<%%= lintel.dist %>/**/*.css',
+          '<%%= lintel.dist %>/**/*.js'
         ],
         options: {
           livereload: true
