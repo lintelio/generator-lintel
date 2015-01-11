@@ -224,6 +224,7 @@ module.exports = function (grunt) {
       options: {
         mangle: true,
         compress: true,
+        preserveComments: 'some',
         sourceMap: true,
       },
       individual: {
