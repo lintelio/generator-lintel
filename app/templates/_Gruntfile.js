@@ -241,6 +241,18 @@ module.exports = function (grunt) {
       }
     },
 
+    // Copy files
+    copy: {
+      js: {
+        files: [{
+          expand: true,
+          cwd: 'js/',
+          src: ['**/*.js'],
+          dest: 'dist/'
+        }]
+      }
+    },
+
     // Run tests
     nodeunit: {
       tests: ['<%%= lintel.test %>/*_test.js']
@@ -290,7 +302,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('sass-compile', ['sass:dist', 'autoprefixer:dist', 'cssmin:dist', 'csslint', 'notify:sass']);
 
-  grunt.registerTask('js-compile', ['uglify', 'jshint', 'notify:js']);
+  grunt.registerTask('js-compile', ['copy:js', 'uglify:concat', 'jshint', 'notify:js']);
 
   grunt.registerTask('test', ['sass-compile', 'js-compile', 'connect', 'clean:tests', 'webshot', 'nodeunit']);
 
