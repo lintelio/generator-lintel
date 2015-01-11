@@ -252,7 +252,13 @@ module.exports = function (grunt) {
         files: [
           'sass/**/*.scss'
         ],
-        tasks: ['test-watch']
+        tasks: ['sass-compile']
+      },
+      js: {
+        files: [
+          'js/**/*.js'
+        ],
+        tasks: ['js-compile']
       },
       livereload: {
         files: [
@@ -269,18 +275,24 @@ module.exports = function (grunt) {
       compile: {
         options: {
           title: '<%= props.name %>',
-          message: 'Done Compiling'
+          message: 'SASS Compiled'
+        }
+      },
+      js: {
+        options: {
+          title: '<%= props.name %>',
+          message: 'JS Compiled'
         }
       }
     }
 
   });
 
-  grunt.registerTask('compile', ['sass:dist', 'autoprefixer:dist', 'cssmin:dist', 'uglify', 'notify:compile']);
+  grunt.registerTask('sass-compile', ['sass:dist', 'autoprefixer:dist', 'cssmin:dist', 'csslint', 'notify:sass']);
 
-  grunt.registerTask('test-watch', ['compile', 'csslint', 'jshint']);
+  grunt.registerTask('js-compile', ['uglify', 'jshint', 'notify:js']);
 
-  grunt.registerTask('test', ['test-watch', 'connect', 'clean:tests', 'webshot', 'nodeunit']);
+  grunt.registerTask('test', ['sass-compile', 'js-compile', 'connect', 'clean:tests', 'webshot', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['test', 'watch']);
