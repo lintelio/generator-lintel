@@ -80,8 +80,9 @@ module.exports = function (grunt) {
       }
     },
 
-    // Remove previous screenshots
+    // Remove previous screenshots and clear dist folder
     clean: {
+      dist: ['<%%= lintel.dist %>'],
       tests: ['<%%= lintel.test %>/tmp']
     },
 
@@ -286,7 +287,7 @@ module.exports = function (grunt) {
 
     // Notify of changes
     notify: {
-      compile: {
+      sass: {
         options: {
           title: '<%= props.name %>',
           message: 'SASS Compiled'
@@ -306,7 +307,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('js-compile', ['copy:js', 'jshint', 'uglify:concat', 'notify:js']);
 
-  grunt.registerTask('test', ['sass-compile', 'js-compile', 'connect', 'clean:tests', 'webshot', 'nodeunit']);
+  <% if (props.languages.js) { %>
+    grunt.registerTask('test', ['clean:dist', 'sass-compile', 'js-compile', 'connect', 'clean:tests', 'webshot', 'nodeunit']);
+  <% } else { %>
+    grunt.registerTask('test', ['clean:dist', 'sass-compile', 'connect', 'clean:tests', 'webshot', 'nodeunit']);
+  <% }%>
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['test', 'watch']);

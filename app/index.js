@@ -137,6 +137,7 @@ module.exports = generators.Base.extend({
           'grunt-autoprefixer': '^2.0.0',
           'grunt-contrib-clean': '^0.6.0',
           'grunt-contrib-connect': '^0.9.0',
+          "grunt-contrib-copy": "^0.7.0",
           'grunt-contrib-csslint': '^0.3.1',
           'grunt-contrib-cssmin': '^0.10.0',
           'grunt-contrib-jshint': '^0.10.0',
